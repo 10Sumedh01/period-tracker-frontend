@@ -107,14 +107,14 @@ function Dashboard({ token }) {
 
   return (
     <div className="space-y-6">
-      p
+      
       {/* Header */}
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center flex-wrap mb-6">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
           <p className="text-gray-600">Track your menstrual cycle and health</p>
         </div>
-        <div className="flex space-x-2">
+        <div className="flex space-x-2 pt-2">
           <Link to="/add-period">
             <Button>
               <Plus className="h-4 w-4 mr-2" />
