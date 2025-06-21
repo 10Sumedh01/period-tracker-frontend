@@ -11,7 +11,7 @@ import PeriodForm from './components/PeriodForm'
 import OvulationForm from './components/OvulationForm'
 import './App.css'
 
-const API_BASE_URL = 'http://127.0.0.1:5001'
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
 
 function App() {
   const [user, setUser] = useState(null)
@@ -47,7 +47,7 @@ function App() {
 
   const fetchUserProfile = async () => {
     try {
-      const response = await fetch(`${API_BASE_URL}/api/profile`, {
+      const response = await fetch(`${API_BASE_URL}/profile`, {
         headers: {
           'Authorization': `Bearer ${token}` // This is correctly implemented
         }
@@ -70,7 +70,7 @@ function App() {
   const handleLogin = async (username, password) => {
     setLoading(true)
     try {
-      const response = await fetch(`${API_BASE_URL}/api/login`, {
+      const response = await fetch(`${API_BASE_URL}/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -98,7 +98,7 @@ function App() {
   const handleRegister = async (username, email, password) => {
     setLoading(true)
     try {
-      const response = await fetch(`${API_BASE_URL}/api/register`, {
+      const response = await fetch(`${API_BASE_URL}/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

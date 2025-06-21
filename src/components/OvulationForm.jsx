@@ -9,7 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { ArrowLeft, Droplets, Thermometer } from 'lucide-react'
 import { format } from 'date-fns'
 
-const API_BASE_URL = 'http://127.0.0.1:5001/api'
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
 
 function OvulationForm({ token }) {
   const navigate = useNavigate()

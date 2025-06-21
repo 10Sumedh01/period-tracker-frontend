@@ -6,8 +6,7 @@ import { Badge } from '@/components/ui/badge.jsx'
 import { Calendar, Plus, TrendingUp, Heart, Droplets, Thermometer } from 'lucide-react'
 import { format, parseISO, addDays, differenceInDays } from 'date-fns'
 
-const API_BASE_URL = 'http://127.0.0.1:5001/api'
-
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
 function Dashboard({ token }) {
   const [periods, setPeriods] = useState([])
   const [ovulations, setOvulations] = useState([])
@@ -108,6 +107,7 @@ function Dashboard({ token }) {
 
   return (
     <div className="space-y-6">
+      p
       {/* Header */}
       <div className="flex justify-between items-center">
         <div>
